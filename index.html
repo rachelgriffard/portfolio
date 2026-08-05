@@ -6,7 +6,8 @@
 <title>Rachel Griffard Smith</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Meddon&family=Montserrat:wght@300&family=Mr+De+Haviland&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mr+De+Haviland&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; }
 
@@ -14,7 +15,7 @@
     margin: 0;
     padding: 0;
     background: #F4F4F4;
-    color: #4d3432;
+    color: #55403e;
     overflow-x: hidden;
   }
 
@@ -36,7 +37,8 @@
   }
 
   h1 .first {
-    font-family: 'Meddon', cursive;
+    font-family: 'Qwitcher Grypen', cursive;
+    font-weight: 700;
     font-size: 4rem;
   }
 
@@ -69,9 +71,109 @@
 
   .gallery img {
     width: 100%;
+    height: auto;
     display: block;
     margin-bottom: 4px;
     break-inside: avoid;
+    object-fit: cover;
+    cursor: zoom-in;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: center;
+    gap: 1.1em;
+    margin: 0 0 1.2em;
+  }
+
+  .contact a {
+    color: #a3867f;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+  }
+
+  .contact a:hover,
+  .contact a:focus-visible {
+    color: #55403e;
+  }
+
+  .contact svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+
+  /* Lightbox */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 14, 13, 0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 3em 1em;
+  }
+
+  .lightbox.open {
+    display: flex;
+  }
+
+  .lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .lightbox-close,
+  .lightbox-prev,
+  .lightbox-next {
+    position: fixed;
+    background: none;
+    border: none;
+    color: #F4F4F4;
+    cursor: pointer;
+    padding: 0.5em;
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+  }
+
+  .lightbox-close:hover,
+  .lightbox-prev:hover,
+  .lightbox-next:hover {
+    opacity: 1;
+  }
+
+  .lightbox-close {
+    top: 0.75em;
+    right: 0.75em;
+  }
+
+  .lightbox-close svg,
+  .lightbox-prev svg,
+  .lightbox-next svg {
+    width: 28px;
+    height: 28px;
+    display: block;
+  }
+
+  .lightbox-prev {
+    left: 0.5em;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .lightbox-next {
+    right: 0.5em;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @media (max-width: 600px) {
+    .lightbox-prev, .lightbox-next { display: none; }
   }
 </style>
 </head>
@@ -82,114 +184,140 @@
   <span class="last" id="lastName">Griffard-Smith</span>
 </h1>
 
-<div class="gallery">
-  <img src="assets/20130101-20130101-DSC09739untitled.avif" alt="" loading="lazy">
-  <img src="assets/20130101-20130101-DSC09758-2untitled.avif" alt="" loading="lazy">
-  <img src="assets/20130101-20130101-DSC09768untitled.avif" alt="" loading="lazy">
-  <img src="assets/20130101-20130101-DSC09805untitled.avif" alt="" loading="lazy">
-  <img src="assets/20130101-20130101-DSC09819untitled.avif" alt="" loading="lazy">
-  <img src="assets/20130101-20130101-DSC09915untitled.avif" alt="" loading="lazy">
-  <img src="assets/20130101-20130101-DSC09919untitled.avif" alt="" loading="lazy">
-  <img src="assets/20130209-20130209-DSC09844untitled.avif" alt="" loading="lazy">
-  <img src="assets/20130209-20130209-DSC09870untitled.avif" alt="" loading="lazy">
-  <img src="assets/20130209-20130209-DSC09871-2untitled.avif" alt="" loading="lazy">
-  <img src="assets/20130209-20130209-DSC09876-2untitled.avif" alt="" loading="lazy">
-  <img src="assets/20130209-20130209-DSC09880-5untitled.avif" alt="" loading="lazy">
-  <img src="assets/20130210-20130210-DSC09931untitled.avif" alt="" loading="lazy">
-  <img src="assets/20181204-IMG_8859untitled.avif" alt="" loading="lazy">
-  <img src="assets/20181204-IMG_8860untitled.avif" alt="" loading="lazy">
-  <img src="assets/20181204-IMG_8867untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190101-IMG_9072untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190108-IMG_9120untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190108-IMG_9123untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190110-IMG_9152untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190114-IMG_9199untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190114-IMG_9201untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190126-IMG_9329untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190205-IMG_9493untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190205-IMG_9494untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190211-IMG_9600untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190211-IMG_9602untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190322-IMG_0008untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190330-IMG_0072untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190330-IMG_0074untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190405-arch-4untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190405-arch-7untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190408-funstuff-9untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190413-041319_jessemccartneyconcert_rachelgriffard-26untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190413-041319_jessemccartneyconcert_rachelgriffard-8untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190419-042019_trackkansasrelays_rachelgriffard-22untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190419-042019_trackkansasrelays_rachelgriffard-23untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190419-042019_trackkansasrelays_rachelgriffard-24untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190419-042019_trackkansasrelays_rachelgriffard-33untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190506-050719_baseballvjacksonstate_rachelgriffard-7untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190521-052219-tsstaff-7untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190702-IMG_0976untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190809-IMG_1226untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190809-IMG_1229untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190810-bwshaylajamie-12untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190810-bwshaylajamie-14untitled.avif" alt="" loading="lazy">
-  <img src="assets/20190827-wthallealice-12untitled.avif" alt="" loading="lazy">
-  <img src="assets/20200505-denisesenior-21untitled.avif" alt="" loading="lazy">
-  <img src="assets/20200606-2rileysenior-3untitled.avif" alt="" loading="lazy">
-  <img src="assets/20200606-4rileysenior-10untitled.avif" alt="" loading="lazy">
-  <img src="assets/20200612-engagement-27untitled.avif" alt="" loading="lazy">
-  <img src="assets/20200615-russelluntitled.avif" alt="" loading="lazy">
-  <img src="assets/20200616-speedboi-4untitled.avif" alt="" loading="lazy">
-  <img src="assets/20200928-IMG_4439untitled.avif" alt="" loading="lazy">
-  <img src="assets/20201002-denise3untitled.avif" alt="" loading="lazy">
-  <img src="assets/20201002-denise7untitled.avif" alt="" loading="lazy">
-  <img src="assets/20201011-sophie-3untitled.avif" alt="" loading="lazy">
-  <img src="assets/20210411-IMG_5977untitled.avif" alt="" loading="lazy">
-  <img src="assets/20210626-IMG_6699untitled.avif" alt="" loading="lazy">
-  <img src="assets/20210626-jessieandrew_0621-172untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250821-Japan (1 of 1)-2untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250821-Japan (1 of 1)untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250821-Japan (1 of 2)untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250821-Japan (2 of 5)untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250821-Japan-00463-2untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250821-Japan-00487untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250821-Japan-00542untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250821-Japan-00572untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250821-Japan-00604untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250821-Japan-00800-2untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250821-Japan-00888untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250908-4edited-00936untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250908-4edited-00959untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250908-JapanEdited2-00006untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250908-JapanEdited2-00030untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250908-JapanEdited2-00036untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250908-JapanEdited2-00045untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250908-JapanEdited2-00047untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250908-JapanEdited2-00061untitled.avif" alt="" loading="lazy">
-  <img src="assets/20250908-JapanEdited2-00085untitled.avif" alt="" loading="lazy">
-  <img src="assets/20260101-IMG_8372untitled.avif" alt="" loading="lazy">
-  <img src="assets/20260107-IMG_8416untitled.avif" alt="" loading="lazy">
-  <img src="assets/20260108-IMG_8423untitled.avif" alt="" loading="lazy">
-  <img src="assets/20260803-brandon-09587-3untitled.avif" alt="" loading="lazy">
-  <img src="assets/20260803-brandon-09620-3untitled.avif" alt="" loading="lazy">
-  <img src="assets/20260803-brandon-09635-6untitled.avif" alt="" loading="lazy">
-  <img src="assets/20260803-dogs-01218-3untitled.avif" alt="" loading="lazy">
-  <img src="assets/20260803-dogs-01228untitled.avif" alt="" loading="lazy">
+<div class="contact">
+  <a href="mailto:rachelgriffard@gmail.com" aria-label="Email">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+  </a>
+  <a href="https://www.linkedin.com/in/rachelgriffard" target="_blank" rel="noopener" aria-label="LinkedIn">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+  </a>
+  <a href="https://orcid.org/0000-0002-3330-695X" target="_blank" rel="noopener" aria-label="ORCID">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><circle cx="8.2" cy="8" r="0.9" fill="currentColor" stroke="none"/><line x1="8.2" y1="10.3" x2="8.2" y2="16.2"/><path d="M11 10.3h2.1a3 3 0 0 1 0 5.9H11z"/></svg>
+  </a>
+  <a href="https://github.com/rachelgriffard" target="_blank" rel="noopener" aria-label="GitHub">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.65.5.1.68-.22.68-.49 0-.24-.01-1.03-.01-1.87-2.78.61-3.37-1.21-3.37-1.21-.46-1.19-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.33 1.11 2.9.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05a9.3 9.3 0 0 1 2.5-.35c.85 0 1.71.12 2.5.35 1.91-1.32 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.35 4.8-4.58 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.19C22 6.58 17.52 2 12 2z"/></svg>
+  </a>
+</div>
+
+
+<div class="gallery" id="gallery">
+<img src="assets/20130101-20130101-DSC09739untitled.avif" style="aspect-ratio:4000/6000;" alt="" loading="lazy" decoding="async">
+<img src="assets/20130101-20130101-DSC09758-2untitled.avif" style="aspect-ratio:1657/2485;" alt="" loading="lazy" decoding="async">
+<img src="assets/20130101-20130101-DSC09768untitled.avif" style="aspect-ratio:3740/5610;" alt="" loading="lazy" decoding="async">
+<img src="assets/20130101-20130101-DSC09805untitled.avif" style="aspect-ratio:6000/3375;" alt="" loading="lazy" decoding="async">
+<img src="assets/20130101-20130101-DSC09819untitled.avif" style="aspect-ratio:5974/3734;" alt="" loading="lazy" decoding="async">
+<img src="assets/20130101-20130101-DSC09915untitled.avif" style="aspect-ratio:3759/5638;" alt="" loading="lazy" decoding="async">
+<img src="assets/20130101-20130101-DSC09919untitled.avif" style="aspect-ratio:4000/5600;" alt="" loading="lazy" decoding="async">
+<img src="assets/20130209-20130209-DSC09844untitled.avif" style="aspect-ratio:5931/3707;" alt="" loading="lazy" decoding="async">
+<img src="assets/20130209-20130209-DSC09870untitled.avif" style="aspect-ratio:6000/3750;" alt="" loading="lazy" decoding="async">
+<img src="assets/20130209-20130209-DSC09871-2untitled.avif" style="aspect-ratio:3426/5482;" alt="" loading="lazy" decoding="async">
+<img src="assets/20130209-20130209-DSC09876-2untitled.avif" style="aspect-ratio:6000/3750;" alt="" loading="lazy" decoding="async">
+<img src="assets/20130209-20130209-DSC09880-5untitled.avif" style="aspect-ratio:4929/2773;" alt="" loading="lazy" decoding="async">
+<img src="assets/20130210-20130210-DSC09931untitled.avif" style="aspect-ratio:5740/3229;" alt="" loading="lazy" decoding="async">
+<img src="assets/20181204-IMG_8859untitled.avif" style="aspect-ratio:4898/3265;" alt="" loading="lazy" decoding="async">
+<img src="assets/20181204-IMG_8860untitled.avif" style="aspect-ratio:1080/1350;" alt="" loading="lazy" decoding="async">
+<img src="assets/20181204-IMG_8867untitled.avif" style="aspect-ratio:1080/722;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190101-IMG_9072untitled.avif" style="aspect-ratio:4898/3265;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190108-IMG_9120untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190108-IMG_9123untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190110-IMG_9152untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190114-IMG_9199untitled.avif" style="aspect-ratio:4651/3100;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190114-IMG_9201untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190126-IMG_9329untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190205-IMG_9493untitled.avif" style="aspect-ratio:3265/4081;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190205-IMG_9494untitled.avif" style="aspect-ratio:2784/4177;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190211-IMG_9600untitled.avif" style="aspect-ratio:4898/3265;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190211-IMG_9602untitled.avif" style="aspect-ratio:4898/3265;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190322-IMG_0008untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190330-IMG_0072untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190330-IMG_0074untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190405-arch-4untitled.avif" style="aspect-ratio:3075/5067;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190405-arch-7untitled.avif" style="aspect-ratio:3266/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190408-funstuff-9untitled.avif" style="aspect-ratio:4898/3265;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190413-041319_jessemccartneyconcert_rachelgriffard-26untitled.avif" style="aspect-ratio:4898/3265;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190413-041319_jessemccartneyconcert_rachelgriffard-8untitled.avif" style="aspect-ratio:4898/3265;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190419-042019_trackkansasrelays_rachelgriffard-22untitled.avif" style="aspect-ratio:4898/3265;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190419-042019_trackkansasrelays_rachelgriffard-23untitled.avif" style="aspect-ratio:4898/3265;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190419-042019_trackkansasrelays_rachelgriffard-24untitled.avif" style="aspect-ratio:4898/3265;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190419-042019_trackkansasrelays_rachelgriffard-33untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190506-050719_baseballvjacksonstate_rachelgriffard-7untitled.avif" style="aspect-ratio:4898/3265;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190521-052219-tsstaff-7untitled.avif" style="aspect-ratio:3266/4899;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190702-IMG_0976untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190809-IMG_1226untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190809-IMG_1229untitled.avif" style="aspect-ratio:3315/4826;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190810-bwshaylajamie-12untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190810-bwshaylajamie-14untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20190827-wthallealice-12untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20200505-denisesenior-21untitled.avif" style="aspect-ratio:3144/5088;" alt="" loading="lazy" decoding="async">
+<img src="assets/20200606-2rileysenior-3untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20200606-4rileysenior-10untitled.avif" style="aspect-ratio:3135/5102;" alt="" loading="lazy" decoding="async">
+<img src="assets/20200612-engagement-27untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20200615-russelluntitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20200616-speedboi-4untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20200928-IMG_4439untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20201002-denise3untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20201002-denise7untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20201011-sophie-3untitled.avif" style="aspect-ratio:3336/4795;" alt="" loading="lazy" decoding="async">
+<img src="assets/20210411-IMG_5977untitled.avif" style="aspect-ratio:3266/4899;" alt="" loading="lazy" decoding="async">
+<img src="assets/20210626-IMG_6699untitled.avif" style="aspect-ratio:3265/4898;" alt="" loading="lazy" decoding="async">
+<img src="assets/20210626-jessieandrew_0621-172untitled.avif" style="aspect-ratio:2714/4072;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250821-Japan (1 of 1)-2untitled.avif" style="aspect-ratio:4000/6000;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250821-Japan (1 of 1)untitled.avif" style="aspect-ratio:3902/5490;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250821-Japan (1 of 2)untitled.avif" style="aspect-ratio:4000/6000;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250821-Japan (2 of 5)untitled.avif" style="aspect-ratio:4000/6000;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250821-Japan-00463-2untitled.avif" style="aspect-ratio:3868/5496;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250821-Japan-00487untitled.avif" style="aspect-ratio:3953/5929;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250821-Japan-00542untitled.avif" style="aspect-ratio:3876/5814;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250821-Japan-00572untitled.avif" style="aspect-ratio:4000/6000;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250821-Japan-00604untitled.avif" style="aspect-ratio:5394/3539;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250821-Japan-00800-2untitled.avif" style="aspect-ratio:4000/6000;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250821-Japan-00888untitled.avif" style="aspect-ratio:3924/5886;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250908-4edited-00936untitled.avif" style="aspect-ratio:4000/6000;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250908-4edited-00959untitled.avif" style="aspect-ratio:3365/5047;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250908-JapanEdited2-00006untitled.avif" style="aspect-ratio:3220/5724;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250908-JapanEdited2-00030untitled.avif" style="aspect-ratio:4000/5176;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250908-JapanEdited2-00036untitled.avif" style="aspect-ratio:3796/5314;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250908-JapanEdited2-00045untitled.avif" style="aspect-ratio:4000/5000;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250908-JapanEdited2-00047untitled.avif" style="aspect-ratio:3845/4806;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250908-JapanEdited2-00061untitled.avif" style="aspect-ratio:3851/5777;" alt="" loading="lazy" decoding="async">
+<img src="assets/20250908-JapanEdited2-00085untitled.avif" style="aspect-ratio:3791/5686;" alt="" loading="lazy" decoding="async">
+<img src="assets/20260101-IMG_8372untitled.avif" style="aspect-ratio:3633/4461;" alt="" loading="lazy" decoding="async">
+<img src="assets/20260107-IMG_8416untitled.avif" style="aspect-ratio:4459/3604;" alt="" loading="lazy" decoding="async">
+<img src="assets/20260108-IMG_8423untitled.avif" style="aspect-ratio:3361/3304;" alt="" loading="lazy" decoding="async">
+<img src="assets/20260803-brandon-09587-3untitled.avif" style="aspect-ratio:2350/3525;" alt="" loading="lazy" decoding="async">
+<img src="assets/20260803-brandon-09620-3untitled.avif" style="aspect-ratio:2155/3233;" alt="" loading="lazy" decoding="async">
+<img src="assets/20260803-brandon-09635-6untitled.avif" style="aspect-ratio:2507/3760;" alt="" loading="lazy" decoding="async">
+<img src="assets/20260803-dogs-01218-3untitled.avif" style="aspect-ratio:2463/3694;" alt="" loading="lazy" decoding="async">
+<img src="assets/20260803-dogs-01228untitled.avif" style="aspect-ratio:3611/5056;" alt="" loading="lazy" decoding="async">
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+  </button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous photo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-next" id="lightboxNext" aria-label="Next photo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
 </div>
 
 <script>
-  // Shuffle the gallery images into a random order on each page load.
-  const gallery = document.querySelector('.gallery');
+  const gallery = document.getElementById('gallery');
   const images = Array.from(gallery.children);
   for (let i = images.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [images[i], images[j]] = [images[j], images[i]];
   }
   images.forEach(img => gallery.appendChild(img));
-
-  // Wait for the web fonts to actually load before measuring widths,
-  // otherwise you'll get fallback-font measurements and the scale will be wrong.
+  gallery.classList.add('ready');
+ 
   document.fonts.ready.then(() => {
     const first = document.getElementById('firstName');
     const last = document.getElementById('lastName');
 
-    // Reset any prior transform before measuring
     first.style.transform = 'none';
     last.style.transform = 'none';
 
@@ -197,10 +325,64 @@
     const w2 = last.getBoundingClientRect().width;
     const target = Math.max(w1, w2);
 
-    first.style.transform = `scaleX(${target / w1})`;
+    const firstFontSize = parseFloat(getComputedStyle(first).fontSize);
+    first.style.fontSize = `${firstFontSize * (target / w1)}px`;
     last.style.transform = `scaleX(${target / w2})`;
   });
-</script>
 
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('lightboxClose');
+  const prevBtn = document.getElementById('lightboxPrev');
+  const nextBtn = document.getElementById('lightboxNext');
+  let currentIndex = -1;
+
+  function galleryImages() {
+    return Array.from(gallery.querySelectorAll('img'));
+  }
+
+  function openLightbox(index) {
+    const imgs = galleryImages();
+    currentIndex = (index + imgs.length) % imgs.length;
+    lightboxImg.src = imgs[currentIndex].src;
+    lightboxImg.alt = imgs[currentIndex].alt;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+  }
+
+  function showRelative(delta) {
+    if (currentIndex === -1) return;
+    openLightbox(currentIndex + delta);
+  }
+
+  gallery.addEventListener('click', (e) => {
+    const img = e.target.closest('img');
+    if (!img) return;
+    openLightbox(galleryImages().indexOf(img));
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  prevBtn.addEventListener('click', () => showRelative(-1));
+  nextBtn.addEventListener('click', () => showRelative(1));
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showRelative(-1);
+    if (e.key === 'ArrowRight') showRelative(1);
+  });
+</script>
+ 
 </body>
 </html>
