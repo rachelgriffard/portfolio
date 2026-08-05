@@ -6,29 +6,47 @@
 <title>Rachel Griffard Smith</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Babylonica&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Meddon&family=Montserrat:wght@300&family=Mr+De+Haviland&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; }
 
   body {
     margin: 0;
     padding: 0;
-    background: #fafafa;
-    color: #111;
+    background: #F4F4F4;
+    color: #4d3432;
+    overflow-x: hidden;
   }
 
   h1 {
-    font-family: 'Babylonica', cursive;
     font-weight: 400;
     text-align: center;
-    line-height: 0.9;
+    line-height: 0.85;
     margin: 0;
-    padding: 0.5em 0.2em 0.3em;
-    font-size: clamp(4rem, 18vw, 12rem);
+    padding: 1.5em 0 0.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   h1 span {
-    display: block;
+    display: inline-block;
+    white-space: nowrap;
+    transform-origin: center top;
+  }
+
+  h1 .first {
+    font-family: 'Meddon', cursive;
+    font-size: 4rem;
+  }
+
+  h1 .last {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 2rem;
+    margin-top: 0.15em;
   }
 
   .gallery {
@@ -60,9 +78,8 @@
 <body>
 
 <h1>
-  <span>Rachel</span>
-  <span>Griffard</span>
-  <span>Smith</span>
+  <span class="first" id="firstName">Rachel</span>
+  <span class="last" id="lastName">Griffard-Smith</span>
 </h1>
 
 <div class="gallery">
@@ -155,6 +172,35 @@
   <img src="assets/20260803-dogs-01218-3untitled.avif" alt="" loading="lazy">
   <img src="assets/20260803-dogs-01228untitled.avif" alt="" loading="lazy">
 </div>
+
+<script>
+  // Shuffle the gallery images into a random order on each page load.
+  const gallery = document.querySelector('.gallery');
+  const images = Array.from(gallery.children);
+  for (let i = images.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [images[i], images[j]] = [images[j], images[i]];
+  }
+  images.forEach(img => gallery.appendChild(img));
+
+  // Wait for the web fonts to actually load before measuring widths,
+  // otherwise you'll get fallback-font measurements and the scale will be wrong.
+  document.fonts.ready.then(() => {
+    const first = document.getElementById('firstName');
+    const last = document.getElementById('lastName');
+
+    // Reset any prior transform before measuring
+    first.style.transform = 'none';
+    last.style.transform = 'none';
+
+    const w1 = first.getBoundingClientRect().width;
+    const w2 = last.getBoundingClientRect().width;
+    const target = Math.max(w1, w2);
+
+    first.style.transform = `scaleX(${target / w1})`;
+    last.style.transform = `scaleX(${target / w2})`;
+  });
+</script>
 
 </body>
 </html>
