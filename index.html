@@ -8,174 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mr+De+Haviland&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
-<style>
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    padding: 0;
-    background: #F4F4F4;
-    color: #55403e;
-    overflow-x: hidden;
-  }
-
-  h1 {
-    font-weight: 400;
-    text-align: center;
-    line-height: 0.85;
-    margin: 0;
-    padding: 1.5em 0 0.3em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  h1 span {
-    display: inline-block;
-    white-space: nowrap;
-    transform-origin: center top;
-  }
-
-  h1 .first {
-    font-family: 'Qwitcher Grypen', cursive;
-    font-weight: 700;
-    font-size: 4rem;
-  }
-
-  h1 .last {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    font-size: 2rem;
-    margin-top: 0.15em;
-  }
-
-  .gallery {
-    column-count: 2;
-    column-gap: 4px;
-    padding: 4px;
-  }
-
-  @media (min-width: 600px) {
-    .gallery { column-count: 3; }
-  }
-
-  @media (min-width: 900px) {
-    .gallery { column-count: 4; }
-  }
-
-  @media (min-width: 1300px) {
-    .gallery { column-count: 5; }
-  }
-
-  .gallery img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 4px;
-    break-inside: avoid;
-    object-fit: cover;
-    cursor: zoom-in;
-  }
-
-  .contact {
-    display: flex;
-    justify-content: center;
-    gap: 1.1em;
-    margin: 0 0 1.2em;
-  }
-
-  .contact a {
-    color: #a3867f;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.2s ease;
-  }
-
-  .contact a:hover,
-  .contact a:focus-visible {
-    color: #55403e;
-  }
-
-  .contact svg {
-    width: 20px;
-    height: 20px;
-    display: block;
-  }
-
-  /* Lightbox */
-  .lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(20, 14, 13, 0.92);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    padding: 3em 1em;
-  }
-
-  .lightbox.open {
-    display: flex;
-  }
-
-  .lightbox img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  }
-
-  .lightbox-close,
-  .lightbox-prev,
-  .lightbox-next {
-    position: fixed;
-    background: none;
-    border: none;
-    color: #F4F4F4;
-    cursor: pointer;
-    padding: 0.5em;
-    opacity: 0.75;
-    transition: opacity 0.2s ease;
-  }
-
-  .lightbox-close:hover,
-  .lightbox-prev:hover,
-  .lightbox-next:hover {
-    opacity: 1;
-  }
-
-  .lightbox-close {
-    top: 0.75em;
-    right: 0.75em;
-  }
-
-  .lightbox-close svg,
-  .lightbox-prev svg,
-  .lightbox-next svg {
-    width: 28px;
-    height: 28px;
-    display: block;
-  }
-
-  .lightbox-prev {
-    left: 0.5em;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .lightbox-next {
-    right: 0.5em;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  @media (max-width: 600px) {
-    .lightbox-prev, .lightbox-next { display: none; }
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -183,6 +16,11 @@
   <span class="first" id="firstName">Rachel</span>
   <span class="last" id="lastName">Griffard-Smith</span>
 </h1>
+
+<nav class="pagenav">
+  <a href="index.html" class="active">Photography</a>
+  <a href="collage.html">Collage</a>
+</nav>
 
 <div class="contact">
   <a href="https://rachelgriffard.github.io" aria-label="Home">
@@ -284,9 +122,6 @@
 <img src="assets/20250908-JapanEdited2-00047untitled.avif" style="aspect-ratio:3845/4806;" alt="" loading="lazy" decoding="async">
 <img src="assets/20250908-JapanEdited2-00061untitled.avif" style="aspect-ratio:3851/5777;" alt="" loading="lazy" decoding="async">
 <img src="assets/20250908-JapanEdited2-00085untitled.avif" style="aspect-ratio:3791/5686;" alt="" loading="lazy" decoding="async">
-<img src="assets/20260101-IMG_8372untitled.avif" style="aspect-ratio:3633/4461;" alt="" loading="lazy" decoding="async">
-<img src="assets/20260107-IMG_8416untitled.avif" style="aspect-ratio:4459/3604;" alt="" loading="lazy" decoding="async">
-<img src="assets/20260108-IMG_8423untitled.avif" style="aspect-ratio:3361/3304;" alt="" loading="lazy" decoding="async">
 <img src="assets/20260803-brandon-09587-3untitled.avif" style="aspect-ratio:2350/3525;" alt="" loading="lazy" decoding="async">
 <img src="assets/20260803-brandon-09620-3untitled.avif" style="aspect-ratio:2155/3233;" alt="" loading="lazy" decoding="async">
 <img src="assets/20260803-brandon-09635-6untitled.avif" style="aspect-ratio:2507/3760;" alt="" loading="lazy" decoding="async">
@@ -307,85 +142,7 @@
   </button>
 </div>
 
-<script>
-  const gallery = document.getElementById('gallery');
-  const images = Array.from(gallery.children);
-  for (let i = images.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [images[i], images[j]] = [images[j], images[i]];
-  }
-  images.forEach(img => gallery.appendChild(img));
-  gallery.classList.add('ready');
- 
-  document.fonts.ready.then(() => {
-    const first = document.getElementById('firstName');
-    const last = document.getElementById('lastName');
+<script src="gallery.js"></script>
 
-    first.style.transform = 'none';
-    last.style.transform = 'none';
-
-    const w1 = first.getBoundingClientRect().width;
-    const w2 = last.getBoundingClientRect().width;
-    const target = Math.max(w1, w2);
-
-    const firstFontSize = parseFloat(getComputedStyle(first).fontSize);
-    first.style.fontSize = `${firstFontSize * (target / w1)}px`;
-    last.style.transform = `scaleX(${target / w2})`;
-  });
-
-  // Lightbox
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const closeBtn = document.getElementById('lightboxClose');
-  const prevBtn = document.getElementById('lightboxPrev');
-  const nextBtn = document.getElementById('lightboxNext');
-  let currentIndex = -1;
-
-  function galleryImages() {
-    return Array.from(gallery.querySelectorAll('img'));
-  }
-
-  function openLightbox(index) {
-    const imgs = galleryImages();
-    currentIndex = (index + imgs.length) % imgs.length;
-    lightboxImg.src = imgs[currentIndex].src;
-    lightboxImg.alt = imgs[currentIndex].alt;
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    lightboxImg.src = '';
-    document.body.style.overflow = '';
-  }
-
-  function showRelative(delta) {
-    if (currentIndex === -1) return;
-    openLightbox(currentIndex + delta);
-  }
-
-  gallery.addEventListener('click', (e) => {
-    const img = e.target.closest('img');
-    if (!img) return;
-    openLightbox(galleryImages().indexOf(img));
-  });
-
-  closeBtn.addEventListener('click', closeLightbox);
-  prevBtn.addEventListener('click', () => showRelative(-1));
-  nextBtn.addEventListener('click', () => showRelative(1));
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') showRelative(-1);
-    if (e.key === 'ArrowRight') showRelative(1);
-  });
-</script>
- 
 </body>
 </html>
