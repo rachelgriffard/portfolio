@@ -193,3 +193,7 @@ h1 .last {
 @media (max-width: 600px) {
   .lightbox-prev, .lightbox-next { display: none; }
 }
+
+.collab a { color: #a3867f; transition: color 0.2s ease; }
+.collab a:hover,
+.collab a:focus-visible { color: #55403e; }
