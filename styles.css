@@ -42,30 +42,39 @@ h1 .last {
 
 .pagenav {
   display: flex;
+  flex-wrap: wrap;               /* keeps links from overflowing on phones */
   justify-content: center;
   gap: 1.5em;
   margin: 0.5em 0 1.2em;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.95rem;            /* was 0.85rem */
+  font-weight: 500;              /* a bit heavier so thin strokes don't wash out */
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .pagenav a {
-  color: #a3867f;
+  color: #7a5f59;                /* ~5.8:1 on white, still the same warm tone */
   text-decoration: none;
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.pagenav a:hover,
+.pagenav a:hover {
+  color: #55403e;
+  border-bottom-color: #c9b3ad;  /* light underline hint on hover */
+}
+
 .pagenav a:focus-visible {
   color: #55403e;
+  outline: 2px solid #55403e;    /* clear indicator for keyboard users */
+  outline-offset: 4px;
 }
 
 .pagenav a.active {
   color: #55403e;
+  font-weight: 700;              /* not relying on color alone */
   border-bottom-color: #55403e;
 }
 
