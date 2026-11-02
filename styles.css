@@ -44,38 +44,42 @@ h1 .last {
   display: flex;
   flex-wrap: wrap;               /* keeps links from overflowing on phones */
   justify-content: center;
-  gap: 1.5em;
-  margin: 0.5em 0 1.2em;
+  gap: 0.6em;
+  margin: 0.8em 1rem 1.4em;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;            /* was 0.85rem */
+  font-size: 0.9rem;
   font-weight: 500;              /* a bit heavier so thin strokes don't wash out */
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
+/* Each page is an outlined pill so it reads as a separate destination */
 .pagenav a {
   color: #7a5f59;                /* ~5.8:1 on white, still the same warm tone */
   text-decoration: none;
-  padding-bottom: 2px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  padding: 0.55em 1.3em;
+  border: 1px solid #c9b3ad;
+  border-radius: 999px;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .pagenav a:hover {
   color: #55403e;
-  border-bottom-color: #c9b3ad;  /* light underline hint on hover */
+  border-color: #55403e;
+  background-color: #ebe3e1;
 }
 
 .pagenav a:focus-visible {
   color: #55403e;
   outline: 2px solid #55403e;    /* clear indicator for keyboard users */
-  outline-offset: 4px;
+  outline-offset: 3px;
 }
 
+/* Current page is filled in */
 .pagenav a.active {
-  color: #55403e;
-  font-weight: 700;              /* not relying on color alone */
-  border-bottom-color: #55403e;
+  color: #F4F4F4;
+  background-color: #55403e;
+  border-color: #55403e;
 }
 
 .gallery {
