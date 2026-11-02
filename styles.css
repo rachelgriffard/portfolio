@@ -229,3 +229,78 @@ h1 .last {
 
 .collab a:hover,
 .collab a:focus-visible { color: #55403e; }
+/* Collaborate page additions */
+.collab h2 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 3rem 0 1.2rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #c9b3ad;
+}
+
+.collab-photo {
+  display: block;
+  width: 100%;
+  max-width: 18rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  margin: 0 auto 2rem;
+}
+
+.collab-list { margin: 0; }
+.collab-list dt { font-weight: 500; color: #55403e; }
+.collab-list dd { margin: 0 0 1.4rem; }
+
+.collab-steps {
+  list-style: none;
+  counter-reset: step;
+  margin: 0 0 1.4rem;
+  padding: 0;
+}
+
+.collab-steps li {
+  counter-increment: step;
+  margin-bottom: 1rem;
+}
+
+.collab-steps li::before {
+  content: counter(step);
+  display: block;
+  font-family: 'Qwitcher Grypen', cursive;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: #a3867f;
+}
+
+.collab-steps li span { font-weight: 500; }
+
+/* Email button matches the nav pills */
+.collab a.collab-button {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.55em 1.6em;
+  border: 1px solid #55403e;
+  border-radius: 999px;
+  background-color: #55403e;
+  color: #F4F4F4;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.collab a.collab-button:hover,
+.collab a.collab-button:focus-visible {
+  background-color: #ebe3e1;
+  color: #55403e;
+}
+
+.collab a.collab-button:focus-visible {
+  outline: 2px solid #55403e;
+  outline-offset: 3px;
+}
